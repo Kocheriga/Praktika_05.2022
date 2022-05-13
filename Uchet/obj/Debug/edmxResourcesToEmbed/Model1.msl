@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UchetModelContainer" CdmEntityContainer="UchetEntities">
+    <EntitySetMapping Name="Address">
+      <EntityTypeMapping TypeName="UchetModel.Address">
+        <MappingFragment StoreEntitySet="Address">
+          <ScalarProperty Name="PoinAddress" ColumnName="PoinAddress" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Street" ColumnName="Street" />
+          <ScalarProperty Name="Home" ColumnName="Home" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ConnectionPoint">
+      <EntityTypeMapping TypeName="UchetModel.ConnectionPoint">
+        <MappingFragment StoreEntitySet="ConnectionPoint">
+          <ScalarProperty Name="PointID" ColumnName="PointID" />
+          <ScalarProperty Name="PointAddress" ColumnName="PointAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Equipment">
+      <EntityTypeMapping TypeName="UchetModel.Equipment">
+        <MappingFragment StoreEntitySet="Equipment">
+          <ScalarProperty Name="NameOfTheEquipment" ColumnName="NameOfTheEquipment" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="MavAddress" ColumnName="MavAddress" />
+          <ScalarProperty Name="IPAddress" ColumnName="IPAddress" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EquipmentAtThePoint">
+      <EntityTypeMapping TypeName="UchetModel.EquipmentAtThePoint">
+        <MappingFragment StoreEntitySet="EquipmentAtThePoint">
+          <ScalarProperty Name="EATP_ID" ColumnName="EATP_ID" />
+          <ScalarProperty Name="PointID" ColumnName="PointID" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="DateOfInstallation" ColumnName="DateOfInstallation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HardwarePorts">
+      <EntityTypeMapping TypeName="UchetModel.HardwarePorts">
+        <MappingFragment StoreEntitySet="HardwarePorts">
+          <ScalarProperty Name="RecordOfPort" ColumnName="RecordOfPort" />
+          <ScalarProperty Name="SerialNumber" ColumnName="SerialNumber" />
+          <ScalarProperty Name="Port" ColumnName="Port" />
+          <ScalarProperty Name="TypeOfPort" ColumnName="TypeOfPort" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User">
+      <EntityTypeMapping TypeName="UchetModel.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Fam_Name" ColumnName="Fam_Name" />
+          <ScalarProperty Name="F_Name" ColumnName="F_Name" />
+          <ScalarProperty Name="L_Name" ColumnName="L_Name" />
+          <ScalarProperty Name="PersonalAccount" ColumnName="PersonalAccount" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
