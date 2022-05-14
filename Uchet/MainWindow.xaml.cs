@@ -28,35 +28,48 @@ namespace Uchet
         Code codewin;
         public MainWindow()
         {
-            InitializeComponent();          
+            InitializeComponent();
+            
+                
         }
         public char[] randomWord = new char[8];
         public string code;
         DispatcherTimer timer;
         int i = 1;
         int k = 10;
-
+        public bool opened=false;
+        //------------------------------генерация кода, открытие диалогового окна, ожидается его закрытие-----------------------------//
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
-            
-            Random random = new Random();
-           for (int i = 0; i < 8; i++)
-           {
-                randomWord[i] = (char)random.Next(48, 123);
-           }
-            code = new string(randomWord);
-            codewin = new Code(code);
-            codewin.Show();
-            codewin.Closing += codewin_Closing;
+            if (opened == false)
+            {
+                Random random = new Random();
+                for (int i = 0; i < 8; i++)
+                {
+                    randomWord[i] = (char)random.Next(48, 123);
+                }
+                code = new string(randomWord);
+                codewin = new Code(code);
+                codewin.Show();
+                codewin.Closing += codewin_Closing;
+                opened = true;
+            }
+            else
+            {
+                codewin.Close();
+                btnUpdate_Click(sender, e);
+            }
         }
-
+        //-----------------------------запускается таймер------------------------------//
         private void codewin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+            opened = false;
             timer = new DispatcherTimer();
             timer.Tick += timer_Tick;
             timer.Interval = new TimeSpan(0, 0, 1);
             timer.Start();
         }
+        //-------------------------обработка таймера, сбрасывание кода----------------------------------//
         private void timer_Tick(object sender, EventArgs e)
         {
             i++;
@@ -66,19 +79,21 @@ namespace Uchet
                 code = null;
             }
         }
+        //-------------------------очистка полей----------------------------------//
         private void btnClose_Click(object sender, RoutedEventArgs e)
         {
             txbCode.Text = "";
             txbLogin.Text = "";
             txbPassword.Password = "";
         }
-        private string connstring;
+        //----------------------------поиск существующей записи-------------------------------//
+        private string connstring= @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Uchet.mdf;integrated security=True";
         private SqlConnection conn;
+
         private void btnSignIn_Click(object sender, RoutedEventArgs e)
         {
             try 
             {
-                connstring = @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Uchet.mdf;integrated security=True";
                 conn = new SqlConnection(connstring);
 
                 SqlCommand cmd = new SqlCommand("SELECT * FROM [User] " +
@@ -116,6 +131,89 @@ namespace Uchet
             catch(Exception ex) 
             {
                 MessageBox.Show(ex.Message, "Ошибка"); 
+            }
+        }
+
+        private void txbLogin_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                conn = new SqlConnection(connstring);
+
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [User] " +
+                    "WHERE Login = @login");
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@login", txbLogin.Text);
+                SqlDataReader Dr = cmd.ExecuteReader();
+                int i1 = 0;
+                while (Dr.Read())
+                {
+                    i1++;
+                }
+                if (i1 == 1)
+                {
+                    txbPassword.IsEnabled = true;
+                }
+                else 
+                {
+                    MessageBox.Show("Введённый номер - неправильный!");
+                }
+                conn.Close();
+            }
+        }
+        
+        private void txbPassword_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM [User] " +
+                    "WHERE Login = @login AND Password =@password");
+                cmd.Connection = conn;
+                conn.Open();
+                cmd.Parameters.AddWithValue("@login", txbLogin.Text);
+                cmd.Parameters.AddWithValue("@password", txbPassword.Password);
+                SqlDataReader Dr = cmd.ExecuteReader();
+                int i1 = 0;
+                while (Dr.Read())
+                {
+                    i1++;
+                }
+                if (i1 == 1)
+                {
+                    txbCode.IsEnabled = true;
+                    btnUpdate.IsEnabled = true;
+                    Random random = new Random();
+                    for (int i = 0; i < 8; i++)
+                    {
+                        randomWord[i] = (char)random.Next(48, 123);
+                    }
+                    if (opened == false)
+                    {
+                        code = new string(randomWord);
+                        codewin = new Code(code);
+                        codewin.Show();
+                        codewin.Closing += codewin_Closing;
+                        opened = true;
+                    }
+                    else
+                    {
+                        codewin.Close();
+                        btnUpdate_Click(sender, e);
+                    }
+                }
+                else 
+                {
+                    MessageBox.Show("Введённый пароль - неправильный!");
+                }
+                conn.Close();
+            }
+        }
+        private void txbCode_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter)
+            {
+                btnSignIn.IsEnabled = true;
             }
         }
     }
