@@ -24,45 +24,46 @@ namespace Uchet
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
-    { 
-        public DispatcherTimer timer;
+    {
+        Code codewin;
         public MainWindow()
         {
-            InitializeComponent();
-            timer = new DispatcherTimer();
-            timer.Interval = TimeSpan.FromSeconds(1);
-            
+            InitializeComponent();          
         }
         public char[] randomWord = new char[8];
-        bool stop = false;
         public string code;
+        DispatcherTimer timer;
+        int i = 1;
+        int k = 10;
+
         private void btnUpdate_Click(object sender, RoutedEventArgs e)
         {
+            
             Random random = new Random();
-            for (int i = 0; i < 8; i++)
-            {
+           for (int i = 0; i < 8; i++)
+           {
                 randomWord[i] = (char)random.Next(48, 123);
-            }
+           }
             code = new string(randomWord);
-            timer.Start();
-            timer.Tick += new EventHandler(timer_Tick);
-            new Thread(()=>MessageBox.Show(code, $"У вас 10 секунд")).Start();    
-            if (stop == true)
-            {
-                this.Close();
-            }
+            codewin = new Code(code);
+            codewin.Show();
+            codewin.Closing += codewin_Closing;
         }
 
-        long ticks = 0;
-       
+        private void codewin_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            timer = new DispatcherTimer();
+            timer.Tick += timer_Tick;
+            timer.Interval = new TimeSpan(0, 0, 1);
+            timer.Start();
+        }
         private void timer_Tick(object sender, EventArgs e)
         {
-            ticks++;
-           
-            if (ticks >= 3)
+            i++;
+            if (i > k)
             {
                 timer.Stop();
-                stop = true;
+                code = null;
             }
         }
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -92,14 +93,19 @@ namespace Uchet
                 {
                     i1++;
                 }
+
                 if (i1 == 1)
                 {
                     if (txbCode.Text == code)
-                    { 
-                    UserWindow user = new UserWindow();
-                    user.Show();
-                    this.Close();
-                    } 
+                    {
+                        UserWindow user = new UserWindow();
+                        user.Show();
+                        this.Close();
+                    }
+                    else 
+                    {
+                        MessageBox.Show("Введён неправильный код, повторите попытку");    
+                    }
                 }
                 else
                 {

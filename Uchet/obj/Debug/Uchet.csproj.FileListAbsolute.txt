@@ -25,3 +25,5 @@ C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\Uchet.csproj.CopyComple
 C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\Uchet.exe
 C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\UserWindow.g.cs
 C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\UserWindow.baml
+C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\Code.g.cs
+C:\Users\1\Source\Repos\Praktika_05.2022\Uchet\obj\Debug\Code.baml

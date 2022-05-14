@@ -12,31 +12,32 @@
             <RowDefinition />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="401*"/>
+            <ColumnDefinition Width="59*"/>
             <ColumnDefinition Width="213"/>
         </Grid.ColumnDefinitions>
-        <Viewbox Grid.Row="0" Grid.Column="1">
+        <Viewbox Grid.Row="0" Grid.Column="3">
             <Image  Source="Resources/Logo.jpg" HorizontalAlignment="Right"/>
         </Viewbox>
-        <TextBlock Grid.Row="0" Grid.Column="0" Margin="40,100,0,0" FontSize="36">Телеком Нева Связь</TextBlock>
+        <TextBlock Grid.Row="0" Grid.Column="0" Margin="40,100,0,0" FontSize="36" Grid.ColumnSpan="3">Телеком Нева Связь</TextBlock>
 
-        <TextBox FontSize="18" Name="txbLogin" HorizontalAlignment="Right" Margin="0,40,20,0"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="30" BorderBrush="Black"/>
-        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,37,273,0"  Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.898,0.501">Номер</Label>
+        <TextBox FontSize="18" Name="txbLogin" HorizontalAlignment="Right" Margin="0,40,20,0"  Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Height="30" BorderBrush="Black" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,37,214,0"  Grid.Row="1" VerticalAlignment="Top" RenderTransformOrigin="0.898,0.501" Grid.Column="1">Номер</Label>
 
-        <PasswordBox FontSize="18" Name="txbPassword" HorizontalAlignment="Right" Margin="0,80,20,0" Grid.Row="1" VerticalAlignment="Top" Width="240" Height="30" BorderBrush="Black"/>
-        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,77,265,0" Grid.Row="1" VerticalAlignment="Top" Height="36">Пароль</Label>
+        <PasswordBox FontSize="18" Name="txbPassword" HorizontalAlignment="Right" Margin="0,80,20,0" Grid.Row="1" VerticalAlignment="Top" Width="240" Height="30" BorderBrush="Black" Grid.ColumnSpan="2" Grid.Column="1"/>
+        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,77,206,0" Grid.Row="1" VerticalAlignment="Top" Height="36" Grid.Column="1">Пароль</Label>
 
-        <TextBox FontSize="18" Name="txbCode" HorizontalAlignment="Right" Margin="0,120,80,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" BorderBrush="Black"/>
-        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,112,293,0" Grid.Row="1" VerticalAlignment="Top" Height="46">Код</Label>
+        <TextBox FontSize="18" Name="txbCode" HorizontalAlignment="Right" Margin="0,120,21,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" Height="30" BorderBrush="Black" Grid.Column="1"/>
+        <Label FontSize="20" HorizontalAlignment="Right" Margin="0,112,234,0" Grid.Row="1" VerticalAlignment="Top" Height="46" Grid.Column="1">Код</Label>
 
-        <Viewbox Grid.Column="0" Grid.Row="1" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,40,0">
+        <Viewbox Grid.Column="1" Grid.Row="1" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,120,40,0" Grid.ColumnSpan="2">
             <Button Click="btnUpdate_Click" Name="btnUpdate">
                 <Image Source="Resources/updateCode.jpg"/>
             </Button>
         </Viewbox>
 
-        <Button Click="btnClose_Click" Name="btnClose" Content="Отмена" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,169,0" Grid.Row="1" Height="30" Width="90" FontSize="19" BorderBrush="White" FontWeight="Medium"/>
-        <Button Click="btnSignIn_Click" Name="btnSignIn"  Content="Вход" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,20,0" Grid.Row="1" Height="30" Width="90" FontSize="19" BorderBrush="White" FontWeight="Medium"/>
-
+        <Button Click="btnClose_Click" Name="btnClose" Content="Отмена" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,110,0" Grid.Row="1" Height="30" Width="90" FontSize="19" BorderBrush="White" FontWeight="Medium" Grid.Column="1"/>
+        <Button Click="btnSignIn_Click" Name="btnSignIn"  Content="Вход" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,220,20,0" Grid.Row="1" Height="30" Width="90" FontSize="19" BorderBrush="White" FontWeight="Medium" Grid.ColumnSpan="2" Grid.Column="1"/>
     </Grid>
 </Window>
