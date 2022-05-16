@@ -5,7 +5,12 @@
       "ProjectGuid": "377e5d05-e8b5-43f3-a724-4c50723dc95b",
       "DisplayName": "Uchet",
       "ColorIndex": 0
+    },
+    "af5be6f1-47bd-44e3-8dcc-0b2e9c789e42": {
+      "ProjectGuid": "af5be6f1-47bd-44e3-8dcc-0b2e9c789e42",
+      "DisplayName": "UchetSes2",
+      "ColorIndex": 1
     }
   },
-  "NextColorIndex": 1
+  "NextColorIndex": 2
 }

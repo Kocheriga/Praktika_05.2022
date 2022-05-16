@@ -10,21 +10,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Threading;
 
-namespace Uchet
+namespace UchetSes2
 {
     /// <summary>
-    /// Логика взаимодействия для Code.xaml
+    /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
-    public partial class Code : Window
+    public partial class MainWindow : Window
     {
-        public string code;
-        public Code(string code)
+        public MainWindow()
         {
-            InitializeComponent(); 
-            randomCode.Content = code;
+            InitializeComponent();
         }
     }
 }
