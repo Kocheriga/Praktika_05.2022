@@ -63,3 +63,11 @@ C:\Users\1\source\repos\Praktika_05.2022\UchetSes2\obj\Debug\UsCon\CRM.baml
 C:\Users\1\source\repos\Praktika_05.2022\UchetSes2\obj\Debug\UsCon\UpravObor.baml
 C:\Users\1\source\repos\Praktika_05.2022\UchetSes2\obj\Debug\UsCon\UserSup.baml
 C:\Users\1\source\repos\Praktika_05.2022\UchetSes2\obj\Debug\UchetSes2.csproj.CopyComplete
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\Uchet.Ses2.mdf
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\Uchet.Ses2_log.ldf
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\EntityFramework.dll
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\EntityFramework.xml
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\gggda\source\repos\Praktika_05.2022\UchetSes2\obj\Debug\UchetSes2.csproj.CopyComplete
