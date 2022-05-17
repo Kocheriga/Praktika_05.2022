@@ -23,6 +23,37 @@ namespace UchetSes2
         public MainWindow()
         {
             InitializeComponent();
+            Content_control.Content = new UchetSes2.UsCon.Abonenti();
+        }
+
+        private void abonents_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.Abonenti();
+        }
+
+        private void upravObor_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.UpravObor();
+        }
+
+        private void activ_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.Activi();
+        }
+
+        private void billing_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.Billing();
+        }
+
+        private void userSup_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.UserSup();
+        }
+
+        private void crm_btn_Click(object sender, RoutedEventArgs e)
+        {
+            Content_control.Content = new UchetSes2.UsCon.CRM();
         }
     }
 }

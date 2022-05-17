@@ -26,40 +26,47 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <StackPanel Grid.Column="0" Orientation="Vertical">
-         <Image  Source="Images/MenuButtons/Logo.jpg" Width="130" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
-          <Button BorderBrush="White" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
-            <Button.Content>
-                <TextBlock>Абоненты</TextBlock>
-            </Button.Content>
-         </Button>
-         <Button BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
-            <Button.Content>
-                <TextBlock TextWrapping="Wrap">Управление оборудованием</TextBlock>
-            </Button.Content>
-         </Button>
-          <Button BorderBrush="White" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
-            <Button.Content>
-                <TextBlock TextWrapping="Wrap">Активы</TextBlock>
-            </Button.Content>
-         </Button>
-         <Button BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
-            <Button.Content>
-                <TextBlock TextWrapping="Wrap">Биллинг</TextBlock>
-            </Button.Content>
-         </Button>
-         <Button BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
-            <Button.Content>
-                <TextBlock TextWrapping="Wrap">Поддержка пользователей</TextBlock>
-            </Button.Content>
-         </Button>
-            <Button BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40">
+            <Image  Source="Images/MenuButtons/Logo.jpg" Width="130" Margin="10,10,0,0" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <Button x:Name="abonents_btn"  BorderBrush="White" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="abonents_btn_Click">
+                <Button.Content>
+                    <TextBlock>Абоненты</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="upravObor_btn" BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="upravObor_btn_Click">
+                <Button.Content>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap">Управление оборудованием</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="activ_btn" BorderBrush="White" Grid.Column="0"  HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="activ_btn_Click">
+                <Button.Content>
+                    <TextBlock TextWrapping="Wrap">Активы</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="billing_btn" BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="billing_btn_Click">
+                <Button.Content>
+                    <TextBlock TextWrapping="Wrap">Биллинг</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="userSup_btn" BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="userSup_btn_Click">
+                <Button.Content>
+                    <TextBlock TextAlignment="Center" TextWrapping="Wrap">Поддержка пользователей</TextBlock>
+                </Button.Content>
+            </Button>
+            <Button x:Name="crm_btn" BorderBrush="White" Grid.Column="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="130" Height="40" Click="crm_btn_Click">
                 <Button.Content>
                     <TextBlock TextWrapping="Wrap">CRM</TextBlock>
                 </Button.Content>
             </Button>
-             </StackPanel>
-            <Button Style="{StaticResource RoundedButtonStyle}" Content="проф." HorizontalAlignment="Center" Margin="0,0,0,80" VerticalAlignment="Bottom" Width="50" Height="50"/>
-            <Button Style="{StaticResource RoundedButtonStyle}"  Content="?" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="50" Height="50" />
-           
+        </StackPanel>
+        <Button Style="{StaticResource RoundedButtonStyle}" Content="проф." HorizontalAlignment="Center" Margin="0,0,0,80" VerticalAlignment="Bottom" Width="50" Height="50"/>
+        <Button Style="{StaticResource RoundedButtonStyle}"  Content="?" HorizontalAlignment="Center" Margin="0,0,0,20" VerticalAlignment="Bottom" Width="50" Height="50" />
+
+        <Rectangle Grid.Column="1" Fill="Gray"/>
+
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" Text="Абоненты ТНС" VerticalAlignment="Top" FontSize="40"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="528,48,0,0" VerticalAlignment="Top" Width="202"/>
+        <Image Name="UserImg" Source="Images/Staff/NULL.jpg" Height="60" Width="60" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,0"/>
+        <Rectangle Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Fill="Gray" Width="580" Height="1" Margin="10,169,0,0"/>
+        <ContentControl Name="Content_control" Grid.Column="2" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="580" Height="380"/>
     </Grid>
 </Window>
