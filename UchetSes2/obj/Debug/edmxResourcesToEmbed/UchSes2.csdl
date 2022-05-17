@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Uchet.Ses2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Abonenti">
+    <Key>
+      <PropertyRef Name="Номер_абонента" />
+    </Key>
+    <Property Name="Номер_абонента" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Пол" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_рождения" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Номер_телефона" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Электронная_почта" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Адрес_прописки" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Адрес_проживания" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Серия_и_номер_паспорта" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Код_подразделения" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Кем_выдан" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_выдачи_паспорта" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Номер_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_заключения_договора" Type="DateTime" Precision="3" />
+    <Property Name="Тип_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Причина_расторжения_договора" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Лицевой_счет" Type="Double" />
+    <Property Name="Услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Услуги1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Услуги2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_расторжения_договора" Type="DateTime" Precision="3" />
+    <Property Name="Серийный_номер_оборудования" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="AbonObor">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Наименование" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Adresa">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="prefix_code" Type="Double" />
+    <Property Name="raion" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="prefix" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="house" Type="Double" />
+  </EntityType>
+  <EntityType Name="InformDlyaSotrudnikov">
+    <Key>
+      <PropertyRef Name="Должность" />
+    </Key>
+    <Property Name="Должность" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="События" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Magistrali">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Название" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RayonSpb">
+    <Key>
+      <PropertyRef Name="Название_района" />
+    </Key>
+    <Property Name="Название_района" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Площадь" Type="Double" />
+    <Property Name="Население" Type="Double" />
+    <Property Name="Количество_станций_метро" Type="Double" />
+    <Property Name="Тип_застройки" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="SetDostupa">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Наименование" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Sotrudnik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ФИО" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Должность" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="ID" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Zayavki">
+    <Key>
+      <PropertyRef Name="номер_заявки" />
+    </Key>
+    <Property Name="номер_заявки" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Дата_создания" Type="DateTime" Precision="3" />
+    <Property Name="ЛС" Type="Double" />
+    <Property Name="Услуга" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Вид_услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Статус" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_оборудования" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Описание_проблемы" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_закрытия" Type="DateTime" Precision="3" />
+    <Property Name="Тип_проблема" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Abonenti" EntityType="Self.Abonenti" />
+    <EntitySet Name="AbonObor" EntityType="Self.AbonObor" />
+    <EntitySet Name="Adresa" EntityType="Self.Adresa" />
+    <EntitySet Name="InformDlyaSotrudnikov" EntityType="Self.InformDlyaSotrudnikov" />
+    <EntitySet Name="Magistrali" EntityType="Self.Magistrali" />
+    <EntitySet Name="RayonSpb" EntityType="Self.RayonSpb" />
+    <EntitySet Name="SetDostupa" EntityType="Self.SetDostupa" />
+    <EntitySet Name="Sotrudnik" EntityType="Self.Sotrudnik" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Zayavki" EntityType="Self.Zayavki" />
+  </EntityContainer>
+</Schema>

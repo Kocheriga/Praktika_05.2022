@@ -15,6 +15,7 @@ namespace UchetSes2
     
     public partial class Entities1 : DbContext
     {
+        public static Entities1 context;
         public Entities1()
             : base("name=Entities1")
         {
@@ -24,7 +25,15 @@ namespace UchetSes2
         {
             throw new UnintentionalCodeFirstException();
         }
-    
+        public static Entities1 GetContext()
+        {
+            if (context == null)
+            {
+                context = new Entities1();
+            }
+            return context;
+        }
+
         public virtual DbSet<Abonenti> Abonenti { get; set; }
         public virtual DbSet<AbonObor> AbonObor { get; set; }
         public virtual DbSet<Adresa> Adresa { get; set; }

@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище UchetSes2ModelContainer" CdmEntityContainer="Entities1">
+    <EntitySetMapping Name="Abonenti">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.Abonenti">
+        <MappingFragment StoreEntitySet="Abonenti">
+          <ScalarProperty Name="Номер_абонента" ColumnName="Номер_абонента" />
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="Пол" ColumnName="Пол" />
+          <ScalarProperty Name="Дата_рождения" ColumnName="Дата_рождения" />
+          <ScalarProperty Name="Номер_телефона" ColumnName="Номер_телефона" />
+          <ScalarProperty Name="Электронная_почта" ColumnName="Электронная_почта" />
+          <ScalarProperty Name="Адрес_прописки" ColumnName="Адрес_прописки" />
+          <ScalarProperty Name="Адрес_проживания" ColumnName="Адрес_проживания" />
+          <ScalarProperty Name="Серия_и_номер_паспорта" ColumnName="Серия_и_номер_паспорта" />
+          <ScalarProperty Name="Код_подразделения" ColumnName="Код_подразделения" />
+          <ScalarProperty Name="Кем_выдан" ColumnName="Кем_выдан" />
+          <ScalarProperty Name="Дата_выдачи_паспорта" ColumnName="Дата_выдачи_паспорта" />
+          <ScalarProperty Name="Номер_договора" ColumnName="Номер_договора" />
+          <ScalarProperty Name="Дата_заключения_договора" ColumnName="Дата_заключения_договора" />
+          <ScalarProperty Name="Тип_договора" ColumnName="Тип_договора" />
+          <ScalarProperty Name="Причина_расторжения_договора" ColumnName="Причина_расторжения_договора" />
+          <ScalarProperty Name="Лицевой_счет" ColumnName="Лицевой_счет" />
+          <ScalarProperty Name="Услуги" ColumnName="Услуги" />
+          <ScalarProperty Name="Услуги1" ColumnName="Услуги1" />
+          <ScalarProperty Name="Услуги2" ColumnName="Услуги2" />
+          <ScalarProperty Name="Дата_расторжения_договора" ColumnName="Дата_расторжения_договора" />
+          <ScalarProperty Name="Серийный_номер_оборудования" ColumnName="Серийный_номер_оборудования" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AbonObor">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.AbonObor">
+        <MappingFragment StoreEntitySet="AbonObor">
+          <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Adresa">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.Adresa">
+        <MappingFragment StoreEntitySet="Adresa">
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="prefix_code" ColumnName="prefix_code" />
+          <ScalarProperty Name="raion" ColumnName="raion" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="house" ColumnName="house" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InformDlyaSotrudnikov">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.InformDlyaSotrudnikov">
+        <MappingFragment StoreEntitySet="InformDlyaSotrudnikov">
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="События" ColumnName="События" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Magistrali">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.Magistrali">
+        <MappingFragment StoreEntitySet="Magistrali">
+          <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+          <ScalarProperty Name="Название" ColumnName="Название" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RayonSpb">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.RayonSpb">
+        <MappingFragment StoreEntitySet="RayonSpb">
+          <ScalarProperty Name="Название_района" ColumnName="Название_района" />
+          <ScalarProperty Name="Площадь" ColumnName="Площадь" />
+          <ScalarProperty Name="Население" ColumnName="Население" />
+          <ScalarProperty Name="Количество_станций_метро" ColumnName="Количество_станций_метро" />
+          <ScalarProperty Name="Тип_застройки" ColumnName="Тип_застройки" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SetDostupa">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.SetDostupa">
+        <MappingFragment StoreEntitySet="SetDostupa">
+          <ScalarProperty Name="Серийный_номер" ColumnName="Серийный_номер" />
+          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sotrudnik">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.Sotrudnik">
+        <MappingFragment StoreEntitySet="Sotrudnik">
+          <ScalarProperty Name="ФИО" ColumnName="ФИО" />
+          <ScalarProperty Name="Должность" ColumnName="Должность" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Zayavki">
+      <EntityTypeMapping TypeName="Uchet.Ses2Model.Zayavki">
+        <MappingFragment StoreEntitySet="Zayavki">
+          <ScalarProperty Name="номер_заявки" ColumnName="номер заявки" />
+          <ScalarProperty Name="Дата_создания" ColumnName="Дата создания" />
+          <ScalarProperty Name="ЛС" ColumnName="ЛС" />
+          <ScalarProperty Name="Услуга" ColumnName="Услуга" />
+          <ScalarProperty Name="Вид_услуги" ColumnName="Вид услуги" />
+          <ScalarProperty Name="Тип_услуги" ColumnName="Тип услуги" />
+          <ScalarProperty Name="Статус" ColumnName="Статус" />
+          <ScalarProperty Name="Тип_оборудования" ColumnName="Тип оборудования" />
+          <ScalarProperty Name="Описание_проблемы" ColumnName="Описание проблемы" />
+          <ScalarProperty Name="Дата_закрытия" ColumnName="Дата закрытия" />
+          <ScalarProperty Name="Тип_проблема" ColumnName="Тип проблема" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

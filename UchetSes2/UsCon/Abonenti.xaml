@@ -7,31 +7,31 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="Абоненты" HorizontalAlignment="Left" Margin="215,274,0,0" VerticalAlignment="Top"/>
+        
         <DataGrid Name="abonenti" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер абонента" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="ФИО" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Пол" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата рождения" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер телефона" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Электронная почта" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Адрес прописки" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Адрес проживания" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Серия и номер паспорта" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Код подразделения" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Кем выдан" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата выдачи паспорта" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер договора" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата заключения договора" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Тип договора" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Причина расторжения договора" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Лицевой счет" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(Интернет)" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(ТВ)" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(Видеонаблюдение)" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата расторжения договора" Width="*"/>
-                <DataGridTextColumn Binding="{Binding Артикул}" Header="Серийный номер оборудования" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Номер_абонента}" Header="Номер абонента" />
+                <DataGridTextColumn Binding="{Binding ФИО}" Header="ФИО" />
+                <DataGridTextColumn Binding="{Binding Пол}" Header="Пол" />
+                <DataGridTextColumn Binding="{Binding Дата_рождения}" Header="Дата рождения" />
+                <DataGridTextColumn Binding="{Binding Номер_телефона}" Header="Номер телефона" />
+                <DataGridTextColumn Binding="{Binding Электронная_почта}" Header="Электронная почта" />
+                <DataGridTextColumn Binding="{Binding Адрес_прописки}" Header="Адрес прописки" />
+                <DataGridTextColumn Binding="{Binding Адрес_проживания}" Header="Адрес проживания" />
+                <DataGridTextColumn Binding="{Binding Серия_и_номер_паспорта}" Header="Серия и номер паспорта" />
+                <DataGridTextColumn Binding="{Binding Код_подразделения}" Header="Код подразделения" />
+                <DataGridTextColumn Binding="{Binding Кем_выдан}" Header="Кем выдан" />
+                <DataGridTextColumn Binding="{Binding Дата_выдачи_паспорта}" Header="Дата выдачи паспорта" />
+                <DataGridTextColumn Binding="{Binding Номер_договора}" Header="Номер договора" />
+                <DataGridTextColumn Binding="{Binding Дата_заключения_договора}" Header="Дата заключения договора" />
+                <DataGridTextColumn Binding="{Binding Тип_договора}" Header="Тип договора" />
+                <DataGridTextColumn Binding="{Binding Причина_расторжения_договора}" Header="Причина расторжения договора" />
+                <DataGridTextColumn Binding="{Binding Лицевой_счет}" Header="Лицевой счет" />
+                <DataGridTextColumn Binding="{Binding Услуги}" Header="Услуги(Интернет)" />
+                <DataGridTextColumn Binding="{Binding Услуги1}" Header="Услуги(ТВ)" />
+                <DataGridTextColumn Binding="{Binding Услуги2}" Header="Услуги(Видеонаблюдение)" />
+                <DataGridTextColumn Binding="{Binding Дата_расторжения_договора}" Header="Дата расторжения договора" />
+                <DataGridTextColumn Binding="{Binding Серийный_номер_оборудования}" Header="Серийный номер оборудования" />
             </DataGrid.Columns>
         </DataGrid>
 
