@@ -8,6 +8,32 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <Label Content="Абоненты" HorizontalAlignment="Left" Margin="215,274,0,0" VerticalAlignment="Top"/>
+        <DataGrid Name="abonenti" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер абонента" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="ФИО" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Пол" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата рождения" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер телефона" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Электронная почта" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Адрес прописки" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Адрес проживания" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Серия и номер паспорта" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Код подразделения" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Кем выдан" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата выдачи паспорта" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Номер договора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата заключения договора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Тип договора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Причина расторжения договора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Лицевой счет" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(Интернет)" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(ТВ)" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Услуги(Видеонаблюдение)" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Дата расторжения договора" Width="*"/>
+                <DataGridTextColumn Binding="{Binding Артикул}" Header="Серийный номер оборудования" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
 
     </Grid>
 </UserControl>

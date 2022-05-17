@@ -8,13 +8,14 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>UchetSes2</RootNamespace>
     <AssemblyName>UchetSes2</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -27,7 +28,6 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
@@ -57,7 +57,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Runtime.Serialization" />
@@ -80,23 +82,47 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Abonenti.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AbonObor.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Adresa.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="InformDlyaSotrudnikov.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Magistrali.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="RayonSpb.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SetDostupa.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sotrudnik.cs">
+      <DependentUpon>UchSes2.tt</DependentUpon>
+    </Compile>
     <Compile Include="sysdiagrams.cs">
-      <DependentUpon>Uchet.tt</DependentUpon>
+      <DependentUpon>UchSes2.tt</DependentUpon>
     </Compile>
-    <Compile Include="Uchet.Context.cs">
+    <Compile Include="UchSes2.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Uchet.Context.tt</DependentUpon>
+      <DependentUpon>UchSes2.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Uchet.cs">
+    <Compile Include="UchSes2.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Uchet.tt</DependentUpon>
+      <DependentUpon>UchSes2.tt</DependentUpon>
     </Compile>
-    <Compile Include="Uchet.Designer.cs">
+    <Compile Include="UchSes2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Uchet.edmx</DependentUpon>
+      <DependentUpon>UchSes2.edmx</DependentUpon>
     </Compile>
     <Compile Include="UsCon\Abonenti.xaml.cs">
       <DependentUpon>Abonenti.xaml</DependentUpon>
@@ -117,7 +143,7 @@
       <DependentUpon>UserSup.xaml</DependentUpon>
     </Compile>
     <Compile Include="Zayavki.cs">
-      <DependentUpon>Uchet.tt</DependentUpon>
+      <DependentUpon>UchSes2.tt</DependentUpon>
     </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -179,12 +205,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="Uchet.edmx">
+    <EntityDeploy Include="UchSes2.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>Uchet.Designer.cs</LastGenOutput>
+      <LastGenOutput>UchSes2.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Uchet.edmx.diagram">
-      <DependentUpon>Uchet.edmx</DependentUpon>
+    <None Include="UchSes2.edmx.diagram">
+      <DependentUpon>UchSes2.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -203,11 +229,6 @@
     <Resource Include="Images\MenuButtons\Управление обрудованием.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Uchet.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Uchet.Context.cs</LastGenOutput>
-      <DependentUpon>Uchet.edmx</DependentUpon>
-    </Content>
     <Content Include="Uchet.Ses2.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -215,10 +236,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Uchet.Ses2.mdf</DependentUpon>
     </Content>
-    <Content Include="Uchet.tt">
+    <Content Include="UchSes2.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>Uchet.edmx</DependentUpon>
-      <LastGenOutput>Uchet.cs</LastGenOutput>
+      <DependentUpon>UchSes2.edmx</DependentUpon>
+      <LastGenOutput>UchSes2.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="UchSes2.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>UchSes2.edmx</DependentUpon>
+      <LastGenOutput>UchSes2.cs</LastGenOutput>
     </Content>
     <Resource Include="Images\Staff\ID1516.jpg" />
     <Resource Include="Images\Staff\ID1517.png" />

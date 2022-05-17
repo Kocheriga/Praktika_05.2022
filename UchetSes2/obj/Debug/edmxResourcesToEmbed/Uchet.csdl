@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Uchet.Ses2Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Zayavki">
+    <Key>
+      <PropertyRef Name="номер_заявки" />
+    </Key>
+    <Property Name="номер_заявки" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Дата_создания" Type="DateTime" Precision="3" />
+    <Property Name="ЛС" Type="Double" />
+    <Property Name="Услуга" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Вид_услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_услуги" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Статус" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Тип_оборудования" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Описание_проблемы" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Дата_закрытия" Type="DateTime" Precision="3" />
+    <Property Name="Тип_проблема" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="UchetSes2Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Zayavki" EntityType="Self.Zayavki" />
+  </EntityContainer>
+</Schema>

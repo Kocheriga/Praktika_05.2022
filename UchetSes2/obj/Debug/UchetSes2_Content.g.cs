@@ -8,6 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uchet.ses2.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uchet.ses2_log.ldf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uchses2.context.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("uchses2.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/staff/id1527.jfif")]
 
 
