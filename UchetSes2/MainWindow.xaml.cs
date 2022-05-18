@@ -28,15 +28,22 @@ namespace UchetSes2
             
             string connstring = @"data source=(LocalDB)\MSSQLLocalDB;attachdbfilename=|DataDirectory|\Uchet.Ses2.mdf;integrated security=True";
             conn = new SqlConnection(connstring);
-            using (var context = new Entities1())
+            string sql = "SELECT * FROM Sotrudnik";
+            conn.Open();
+            SqlCommand cmd = new SqlCommand(sql, conn);
+            SqlDataReader reader = cmd.ExecuteReader();
+            while (reader.Read())
             {
-                sotrudniki = Entities1.GetContext().Sotrudnik.ToList();
-                foreach (var sotrudnik1 in sotrudniki)
-                {
-                    sotrudnik.Items.Add(sotrudnik1.ФИО);
-                }
+                int index = reader.GetOrdinal("ФИО");
+                name = reader.GetString(index);
+                sotrudnik.Items.Add(name);
             }
+            reader.Close();
+            conn.Close();
+            
         }
+        string name;
+        
         List<Sotrudnik> sotrudniki = new List<Sotrudnik>();
         
         private SqlConnection conn;

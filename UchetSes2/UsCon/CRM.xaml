@@ -5,8 +5,32 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UchetSes2.UsCon"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="480" d:DesignWidth="800">
     <Grid>
-        <Label Content="CRM" HorizontalAlignment="Left" Margin="263,246,0,0" VerticalAlignment="Top"/>
+        <Label Margin="30,30,0,0" Content="номер_заявки"/>
+        <Label Margin="30,70,0,0" Content="Дата_создания"/>
+        <Label Margin="30,110,0,0" Content="ЛС"/>
+        <Label Margin="30,150,0,0" Content="Услуга"/>
+        <Label Margin="30,190,0,0" Content="Вид_услуги"/>
+        <Label Margin="30,230,0,0" Content="Тип_услуги"/>
+        <Label Margin="30,270,0,0" Content="Статус"/>
+        <Label Margin="30,310,0,0" Content="Тип_оборудования"/>
+        <Label Margin="30,350,0,0" Content="Описание_проблемы"/>
+        <Label Margin="30,390,0,0" Content="Дата_закрытия"/>
+        <Label Margin="30,430,0,0" Content="Тип_проблема"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,30,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,70,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,110,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,150,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,190,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,230,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,270,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,310,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,350,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,390,0,0"/>
+        <TextBox Width="200" Height="30" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="180,430,0,0"/>
+
+        <Button Content="Добавить заявку" Width="200" Height="200" VerticalAlignment="Top" HorizontalAlignment="Left" Margin="480,140,0,0" Click="Button_Click"/>
     </Grid>
+
 </UserControl>

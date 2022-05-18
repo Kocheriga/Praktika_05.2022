@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:UchetSes2"
         mc:Ignorable="d"
-        Title="Работа с абонентами" Height="650" Width="1000">
+        Title="Работа с абонентами" Height="835" Width="1132">
     <Window.Resources>
         <Style x:Key="RoundedButtonStyle" TargetType="{x:Type Button}">
             <Setter Property="Template">
@@ -19,7 +19,7 @@
             </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
+    <Grid Margin="0,0,0,-6">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="150"/>
             <ColumnDefinition Width="1"/>
@@ -64,9 +64,11 @@
         <Rectangle Grid.Column="1" Fill="Gray"/>
 
         <TextBlock Name="nameOfPage" Grid.Column="2" HorizontalAlignment="Left" Margin="30,30,0,0" TextWrapping="Wrap" Text="Абоненты ТНС" VerticalAlignment="Top" FontSize="30"/>
-        <ComboBox  DisplayMemberPath="ФИО"  SelectedItem="{Binding Sotrudnik}" Name="sotrudnik" Grid.Column="2" HorizontalAlignment="Left" Margin="528,48,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="sotrudnik_SelectionChanged"/>
+        <ComboBox  DisplayMemberPath="ФИО"  SelectedItem="{Binding Sotrudnik}" Name="sotrudnik" Grid.Column="2" HorizontalAlignment="Left" Margin="647,44,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="sotrudnik_SelectionChanged"/>
         <Image Name="UserImg" Source="Images/Staff/NULL.jpg" Height="60" Width="60" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,0"/>
-        <Rectangle Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Fill="Gray" Width="580" Height="1" Margin="10,169,0,0"/>
-        <ContentControl ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" Name="Content_control" Grid.Column="2" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="580" Height="380"/>
+        <Rectangle Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Fill="Gray" Width="769" Height="1" Margin="10,169,0,0"/>
+        <ContentControl ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Name="Content_control" Grid.Column="2" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="769" Height="570"/>
+        <RadioButton Grid.Column="2" Content="Активные" HorizontalAlignment="Left" Margin="30,773,0,0" VerticalAlignment="Top"/>
+        <RadioButton Grid.Column="2" Content="Неактивные" HorizontalAlignment="Left" Margin="162,773,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

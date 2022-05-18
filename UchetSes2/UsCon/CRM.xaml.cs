@@ -24,5 +24,10 @@ namespace UchetSes2.UsCon
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Функция временно недоступна");
+        }
     }
 }
