@@ -23,6 +23,9 @@ namespace UchetSes2.UsCon
         public UpravObor()
         {
             InitializeComponent();
+            Obor1.ItemsSource = Entities1.GetContext().AbonObor.ToList();
+            Obor2.ItemsSource = Entities1.GetContext().SetDostupa.ToList();
+            Obor3.ItemsSource = Entities1.GetContext().Magistrali.ToList();
         }
     }
 }

@@ -7,7 +7,36 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Label Content="управление оборудованием" HorizontalAlignment="Left" Margin="307,267,0,0" VerticalAlignment="Top"/>
+        <TabControl HorizontalAlignment="Left" Height="450" VerticalAlignment="Top" Width="800">
+            <TabItem Header="Контроль состояния">
+                <Grid Background="#FFE5E5E5">
+                    <DataGrid Name="Obor1" HorizontalAlignment="Left" Height="117" Margin="10,10,0,0" VerticalAlignment="Top" Width="774" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Серийный номер" Binding="{Binding Серийный_номер}" Width="*"/>
+                            <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid Name="Obor2" HorizontalAlignment="Left" Height="100" Margin="10,157,0,0" VerticalAlignment="Top" Width="774" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Серийный номер" Binding="{Binding Серийный_номер}" Width="*"/>
+                            <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <DataGrid Name="Obor3" HorizontalAlignment="Left" Height="100" Margin="10,301,0,0" VerticalAlignment="Top" Width="774" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Серийный номер" Binding="{Binding Серийный_номер}" Width="*"/>
+                            <DataGridTextColumn Header="Наименование" Binding="{Binding Наименование}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Настройка оборудования">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+            <TabItem Header="Расчета количества базовых станций">
+                <Grid Background="#FFE5E5E5"/>
+            </TabItem>
+        </TabControl>
 
     </Grid>
 </UserControl>

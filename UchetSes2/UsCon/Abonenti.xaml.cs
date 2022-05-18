@@ -23,7 +23,7 @@ namespace UchetSes2.UsCon
         public Abonenti()
         {
             InitializeComponent();
-            abonenti.ItemsSource = Entities1.GetContext().Abonenti.ToList();
+            //abonenti.ItemsSource = Entities1.GetContext().Abonenti.ToList();
         }
     }
 }
