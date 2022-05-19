@@ -35,14 +35,14 @@ namespace UchetSes2
             while (reader.Read())
             {
                 int index = reader.GetOrdinal("ФИО");
-                name = reader.GetString(index);
-                sotrudnik.Items.Add(name);
+                name123 = reader.GetString(index);
+                sotrudnik.Items.Add(name123);
             }
             reader.Close();
             conn.Close();
             
         }
-        string name;
+        string name123;
         
         List<Sotrudnik> sotrudniki = new List<Sotrudnik>();
         

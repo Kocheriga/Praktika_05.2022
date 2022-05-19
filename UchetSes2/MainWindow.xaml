@@ -67,7 +67,7 @@
         <ComboBox  DisplayMemberPath="ФИО"  SelectedItem="{Binding Sotrudnik}" Name="sotrudnik" Grid.Column="2" HorizontalAlignment="Left" Margin="647,44,0,0" VerticalAlignment="Top" Width="213" SelectionChanged="sotrudnik_SelectionChanged"/>
         <Image Name="UserImg" Source="Images/Staff/NULL.jpg" Height="60" Width="60" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,30,30,0"/>
         <Rectangle Grid.Column="2" HorizontalAlignment="Left"  VerticalAlignment="Top" Fill="Gray" Width="769" Height="1" Margin="10,169,0,0"/>
-        <ContentControl ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Name="Content_control" Grid.Column="2" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="769" Height="570"/>
+        <ContentControl ScrollViewer.CanContentScroll="True" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto"  Name="Content_control" Grid.Column="2" HorizontalAlignment="Left" Margin="10,170,0,0" VerticalAlignment="Top" Width="770" Height="570"/>
         <RadioButton Grid.Column="2" Content="Активные" HorizontalAlignment="Left" Margin="30,773,0,0" VerticalAlignment="Top"/>
         <RadioButton Grid.Column="2" Content="Неактивные" HorizontalAlignment="Left" Margin="162,773,0,0" VerticalAlignment="Top"/>
     </Grid>
