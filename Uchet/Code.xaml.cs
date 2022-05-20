@@ -21,7 +21,6 @@ namespace Uchet
     public partial class Code : Window
     {
         public string code;
-        public char[] randomWord = new char[8];
         public Code(string code)
         {
             InitializeComponent(); 

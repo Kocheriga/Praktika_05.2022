@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Uchet.Ses2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.AbonentOborud" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="AbonentOborud">
+          <Property Name="Серийный номер" Type="nvarchar" MaxLength="255" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+          <Property Name="F3" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.Abonents" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Abonents">
+          <Property Name="Номер абонента" Type="nvarchar" MaxLength="255" />
+          <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
+          <Property Name="Пол" Type="nvarchar" MaxLength="255" />
+          <Property Name="Дата рождения" Type="nvarchar" MaxLength="255" />
+          <Property Name="Номер телефона" Type="nvarchar" MaxLength="255" />
+          <Property Name="Электронная почта" Type="nvarchar" MaxLength="255" />
+          <Property Name="Адрес прописки" Type="nvarchar" MaxLength="255" />
+          <Property Name="Адрес проживания" Type="nvarchar" MaxLength="255" />
+          <Property Name="Серия и номер паспорта" Type="nvarchar" MaxLength="255" />
+          <Property Name="Код подразделения" Type="nvarchar" MaxLength="255" />
+          <Property Name="Кем выдан" Type="nvarchar" MaxLength="255" />
+          <Property Name="Дата выдачи паспорта" Type="nvarchar" MaxLength="255" />
+          <Property Name="Номер договора" Type="nvarchar" MaxLength="255" />
+          <Property Name="Дата заключения договора" Type="datetime" />
+          <Property Name="Тип договора" Type="nvarchar" MaxLength="255" />
+          <Property Name="Причина расторжения договора" Type="nvarchar" MaxLength="255" />
+          <Property Name="Лицевой счет" Type="float" />
+          <Property Name="Услуги" Type="nvarchar" MaxLength="255" />
+          <Property Name="Услуги1" Type="nvarchar" MaxLength="255" />
+          <Property Name="Услуги2" Type="nvarchar" MaxLength="255" />
+          <Property Name="Дата расторжения договора" Type="datetime" />
+          <Property Name="Серийный номер оборудования " Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.Adresa" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Adresa">
+          <Property Name="number" Type="nvarchar" MaxLength="255" />
+          <Property Name="prefix_code" Type="float" />
+          <Property Name="raion" Type="nvarchar" MaxLength="255" />
+          <Property Name="prefix" Type="nvarchar" MaxLength="255" />
+          <Property Name="house" Type="float" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.InformDlyaSotr" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="InformDlyaSotr">
+          <Property Name="Руководитель отдела по работе с клиентами" Type="nvarchar" MaxLength="255" />
+          <Property Name="Менеджер по работе с клиентами" Type="nvarchar" MaxLength="255" />
+          <Property Name="Руководитель отдела технической поддержки" Type="nvarchar" MaxLength="255" />
+          <Property Name="Специалист технической поддержки" Type="nvarchar" MaxLength="255" />
+          <Property Name="Бухгалтер" Type="nvarchar" MaxLength="255" />
+          <Property Name="Директор по развитию" Type="nvarchar" MaxLength="255" />
+          <Property Name="Сотрудник технического департамента" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.Magistral" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Magistral">
+          <Property Name="Серийный номер" Type="nvarchar" MaxLength="255" />
+          <Property Name="Название" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.RayoniSpb" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="RayoniSpb">
+          <Property Name="Название района" Type="nvarchar" MaxLength="255" />
+          <Property Name="Площадь, км#кв#" Type="float" />
+          <Property Name="Население" Type="float" />
+          <Property Name="Количество станций метро" Type="float" />
+          <Property Name="Тип застройки" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.SetiDostupa" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="SetiDostupa">
+          <Property Name="Серийный номер" Type="nvarchar" MaxLength="255" />
+          <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+          <Property Name="F3" Type="nvarchar" MaxLength="255" />
+          <Property Name="F4" Type="nvarchar" MaxLength="255" />
+          <Property Name="F5" Type="nvarchar" MaxLength="255" />
+          <Property Name="F6" Type="nvarchar" MaxLength="255" />
+          <Property Name="F7" Type="nvarchar" MaxLength="255" />
+          <Property Name="F8" Type="nvarchar" MaxLength="255" />
+          <Property Name="F9" Type="nvarchar" MaxLength="255" />
+          <Property Name="F10" Type="nvarchar" MaxLength="255" />
+          <Property Name="F11" Type="nvarchar" MaxLength="255" />
+          <Property Name="F12" Type="nvarchar" MaxLength="255" />
+          <Property Name="F13" Type="nvarchar" MaxLength="255" />
+          <Property Name="F14" Type="nvarchar" MaxLength="255" />
+          <Property Name="F15" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6013: Первичный ключ в таблице или представлении "C:\USERS\GGGDA\SOURCE\REPOS\PRAKTIKA_05.2022\UCHETSES2\UCHET.SES2.MDF.dbo.Sotrudniki" не определен, его не удалось вывести. Эта таблица или представление исключены. Чтобы использовать сущность, необходимо проверить схему, добавить правильные ключи и раскомментировать ее.
+        <EntityType Name="Sotrudniki">
+          <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
+          <Property Name="Должность" Type="nvarchar" MaxLength="255" />
+          <Property Name="IDСотрудника" Type="nvarchar" MaxLength="255" />
+        </EntityType>-->
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Zayavki">
+    <Key>
+      <PropertyRef Name="номер заявки" />
+    </Key>
+    <Property Name="номер заявки" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Дата создания" Type="datetime" />
+    <Property Name="ЛС" Type="float" />
+    <Property Name="Услуга" Type="nvarchar" MaxLength="255" />
+    <Property Name="Вид услуги" Type="nvarchar" MaxLength="255" />
+    <Property Name="Тип услуги" Type="nvarchar" MaxLength="255" />
+    <Property Name="Статус" Type="nvarchar" MaxLength="255" />
+    <Property Name="Тип оборудования" Type="nvarchar" MaxLength="255" />
+    <Property Name="Описание проблемы" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата закрытия" Type="datetime" />
+    <Property Name="Тип проблема" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="Хранилище UchetSes2ModelContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zayavki" EntityType="Self.Zayavki" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

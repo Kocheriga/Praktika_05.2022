@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Uchet.Ses2Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Abonenti">
+    <Key>
+      <PropertyRef Name="Номер_абонента" />
+    </Key>
+    <Property Name="Номер_абонента" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
+    <Property Name="Пол" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата_рождения" Type="nvarchar" MaxLength="255" />
+    <Property Name="Номер_телефона" Type="nvarchar" MaxLength="255" />
+    <Property Name="Электронная_почта" Type="nvarchar" MaxLength="255" />
+    <Property Name="Адрес_прописки" Type="nvarchar" MaxLength="255" />
+    <Property Name="Адрес_проживания" Type="nvarchar" MaxLength="255" />
+    <Property Name="Серия_и_номер_паспорта" Type="nvarchar" MaxLength="255" />
+    <Property Name="Код_подразделения" Type="nvarchar" MaxLength="255" />
+    <Property Name="Кем_выдан" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата_выдачи_паспорта" Type="nvarchar" MaxLength="255" />
+    <Property Name="Номер_договора" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата_заключения_договора" Type="datetime" />
+    <Property Name="Тип_договора" Type="nvarchar" MaxLength="255" />
+    <Property Name="Причина_расторжения_договора" Type="nvarchar" MaxLength="255" />
+    <Property Name="Лицевой_счет" Type="float" />
+    <Property Name="Услуги" Type="nvarchar" MaxLength="255" />
+    <Property Name="Услуги1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Услуги2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата_расторжения_договора" Type="datetime" />
+    <Property Name="Серийный_номер_оборудования" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="AbonObor">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Adresa">
+    <Key>
+      <PropertyRef Name="number" />
+    </Key>
+    <Property Name="number" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="prefix_code" Type="float" />
+    <Property Name="raion" Type="nvarchar" MaxLength="255" />
+    <Property Name="prefix" Type="nvarchar" MaxLength="255" />
+    <Property Name="house" Type="float" />
+  </EntityType>
+  <EntityType Name="InformDlyaSotrudnikov">
+    <Key>
+      <PropertyRef Name="Должность" />
+    </Key>
+    <Property Name="Должность" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="События" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Magistrali">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Название" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="RayonSpb">
+    <Key>
+      <PropertyRef Name="Название_района" />
+    </Key>
+    <Property Name="Название_района" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Площадь" Type="float" />
+    <Property Name="Население" Type="float" />
+    <Property Name="Количество_станций_метро" Type="float" />
+    <Property Name="Тип_застройки" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="SetDostupa">
+    <Key>
+      <PropertyRef Name="Серийный_номер" />
+    </Key>
+    <Property Name="Серийный_номер" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Наименование" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Sotrudnik">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ФИО" Type="nvarchar" MaxLength="255" />
+    <Property Name="Должность" Type="nvarchar" MaxLength="255" />
+    <Property Name="ID" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Zayavki">
+    <Key>
+      <PropertyRef Name="номер заявки" />
+    </Key>
+    <Property Name="номер заявки" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="Дата создания" Type="datetime" />
+    <Property Name="ЛС" Type="float" />
+    <Property Name="Услуга" Type="nvarchar" MaxLength="255" />
+    <Property Name="Вид услуги" Type="nvarchar" MaxLength="255" />
+    <Property Name="Тип услуги" Type="nvarchar" MaxLength="255" />
+    <Property Name="Статус" Type="nvarchar" MaxLength="255" />
+    <Property Name="Тип оборудования" Type="nvarchar" MaxLength="255" />
+    <Property Name="Описание проблемы" Type="nvarchar" MaxLength="255" />
+    <Property Name="Дата закрытия" Type="datetime" />
+    <Property Name="Тип проблема" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityContainer Name="Хранилище UchetSes2ModelContainer">
+    <EntitySet Name="Abonenti" EntityType="Self.Abonenti" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AbonObor" EntityType="Self.AbonObor" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Adresa" EntityType="Self.Adresa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InformDlyaSotrudnikov" EntityType="Self.InformDlyaSotrudnikov" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Magistrali" EntityType="Self.Magistrali" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RayonSpb" EntityType="Self.RayonSpb" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SetDostupa" EntityType="Self.SetDostupa" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Sotrudnik" EntityType="Self.Sotrudnik" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Zayavki" EntityType="Self.Zayavki" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

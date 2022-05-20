@@ -15,11 +15,19 @@ namespace Uchet
     
     public partial class UchetEntities : DbContext
     {
+        private static UchetEntities context;
         public UchetEntities()
             : base("name=UchetEntities")
         {
         }
-    
+
+        public static UchetEntities GetContext()
+        {
+            if (context == null)
+                context = new UchetEntities();
+            return context;
+        }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             throw new UnintentionalCodeFirstException();
@@ -33,3 +41,6 @@ namespace Uchet
         public virtual DbSet<User> User { get; set; }
     }
 }
+
+
+//Data Source=.\SQLEXPRESS; Initial Catalog=Uchet.Ses2; Integrated Security=True;

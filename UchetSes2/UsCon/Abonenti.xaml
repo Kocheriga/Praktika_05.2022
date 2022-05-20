@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="UchetSes2.UsCon.Abonenti"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UchetSes2.UsCon"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        
+        <DataGrid Name="abonenti" AutoGenerateColumns="False" IsReadOnly="True" ScrollViewer.CanContentScroll="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Номер_абонента}" Header="Номер абонента" />
+                <DataGridTextColumn Binding="{Binding ФИО}" Header="ФИО" />
+                <DataGridTextColumn Binding="{Binding Пол}" Header="Пол" />
+                <DataGridTextColumn Binding="{Binding Дата_рождения}" Header="Дата рождения" />
+                <DataGridTextColumn Binding="{Binding Номер_телефона}" Header="Номер телефона" />
+                <DataGridTextColumn Binding="{Binding Электронная_почта}" Header="Электронная почта" />
+                <DataGridTextColumn Binding="{Binding Адрес_прописки}" Header="Адрес прописки" />
+                <DataGridTextColumn Binding="{Binding Адрес_проживания}" Header="Адрес проживания" />
+                <DataGridTextColumn Binding="{Binding Серия_и_номер_паспорта}" Header="Серия и номер паспорта" />
+                <DataGridTextColumn Binding="{Binding Код_подразделения}" Header="Код подразделения" />
+                <DataGridTextColumn Binding="{Binding Кем_выдан}" Header="Кем выдан" />
+                <DataGridTextColumn Binding="{Binding Дата_выдачи_паспорта}" Header="Дата выдачи паспорта" />
+                <DataGridTextColumn Binding="{Binding Номер_договора}" Header="Номер договора" />
+                <DataGridTextColumn Binding="{Binding Дата_заключения_договора}" Header="Дата заключения договора" />
+                <DataGridTextColumn Binding="{Binding Тип_договора}" Header="Тип договора" />
+                <DataGridTextColumn Binding="{Binding Причина_расторжения_договора}" Header="Причина расторжения договора" />
+                <DataGridTextColumn Binding="{Binding Лицевой_счет}" Header="Лицевой счет" />
+                <DataGridTextColumn Binding="{Binding Услуги}" Header="Услуги(Интернет)" />
+                <DataGridTextColumn Binding="{Binding Услуги1}" Header="Услуги(ТВ)" />
+                <DataGridTextColumn Binding="{Binding Услуги2}" Header="Услуги(Видеонаблюдение)" />
+                <DataGridTextColumn Binding="{Binding Дата_расторжения_договора}" Header="Дата расторжения договора" />
+                <DataGridTextColumn Binding="{Binding Серийный_номер_оборудования}" Header="Серийный номер оборудования" />
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</UserControl>
